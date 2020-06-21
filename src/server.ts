@@ -1,10 +1,4 @@
-import express from "express";
-import "@controllers/UsersController";
+import app from "@infra/App";
 
-const app = express();
-
-app.get("/", (request, response) => {
-  return response.json({ message: "Hello World" });
-});
-
-app.listen(3333);
+const PORT = process.env.port || 5000;
+app.listen(PORT);
